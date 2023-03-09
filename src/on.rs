@@ -8,19 +8,6 @@ pub trait On<E>
 where
     E: Event,
 {
-    /// Register an event handler.
-    ///
-    /// # Example
-    ///
-    /// ```
-    /// use events::Client;
-    ///
-    /// let client: Client<Event> = Client::new();
-    ///
-    /// client.on(|event| async move {
-    ///    ...
-    /// });
-    /// ```
     async fn on<F, R>(&self, f: F)
     where
         F: Fn(E) -> R + Send + Sync + 'static,
