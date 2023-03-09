@@ -1,0 +1,9 @@
+[package]
+name = "events"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.26.0", features = ["rt", "sync", "parking_lot"] }
+anyhow = '1.0.69'
+async-trait = "0.1.66"
